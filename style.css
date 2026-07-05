@@ -502,3 +502,33 @@ body {
         width: 100%;
     }
 }
+/* --- AD Builds Card Layout & Image Grid Fix --- */
+.work-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* Saare cards ki height barabar rakhega */
+}
+
+.work-image-container {
+    width: 100%;
+    height: 180px; /* Card ke hisab se perfect picture height */
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: #161616; /* Fallback frame design */
+}
+
+.work-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image ko stretch hone se bachayega aur poora fit karega */
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Elite Hover Effect */
+.work-card:hover .work-image-container img {
+    transform: scale(1.05); /* Card par hover karte hi pic smoothly zoom hogi */
+}
