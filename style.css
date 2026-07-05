@@ -94,8 +94,9 @@ body {
 
 .text-gradient {
     background: linear-gradient(135deg, #3b82f6, #60a5fa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text; /* 1. Standard property*/
+    -webkit-background-clip: text; /* 2. WebKit browsers ke liye background clip text trigger */
+    -webkit-text-fill-color: transparent; /* 3. Color fill ko remove karne ke liye */
 }
 
 .hero-content p {
