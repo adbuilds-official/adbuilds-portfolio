@@ -502,8 +502,25 @@ body {
         padding: 14px 25px;
         width: 100%;
     }
+    
+    /* 🔥 Mobile Responsive Grid Center Fix (Card Spacing Fix Inside Media Query) */
+    .work-section-container, 
+    .projects-grid,
+    .portfolio-grid { /* Jo bhi aapka grid main section container hai */
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-card {
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
 }
-/* --- AD Builds Card Layout & Image Grid Fix --- */
+
+/* --- AD Builds Card Layout & Image Grid Fix (Global Styles - Baahar Rahenge) --- */
 .work-card {
     display: flex;
     flex-direction: column;
