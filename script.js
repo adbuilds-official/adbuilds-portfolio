@@ -28,19 +28,3 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
-
-// 3. Dynamic Interactive FAQ Accordion Trigger Matrix
-document.querySelectorAll('.faq-question').forEach(questionBlock => {
-    questionBlock.addEventListener('click', () => {
-        const parentItem = questionBlock.parentElement;
-        
-        // Closes adjacent active accordion rows seamlessly
-        document.querySelectorAll('.faq-item').forEach(item => {
-            if (item !== parentItem) {
-                item.classList.remove('active');
-            }
-        });
-        
-        parentItem.classList.toggle('active');
-    });
-});
